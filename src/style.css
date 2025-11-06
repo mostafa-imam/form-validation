@@ -1,0 +1,169 @@
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* custom variables */
+:root {
+    --fs-1: 1rem;
+    --fs-2: 1.618rem;
+    --fs-3: 2.618rem;
+    --fs-4: 4.236rem;
+    --fs-5: 6.854rem;
+    --fs-small: 0.618rem;
+
+    --clr-1: #FAF9F6;
+}
+
+/* fonts */
+
+/* base styles */
+
+body {
+    background-color: var(--clr-1);
+}
+
+/* styles */
+.wrapper {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: var(--fs-1);
+}
+
+.right-pane {
+    background-image: url("./assets/hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--fs-3);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* grid-template-rows: repeat(4, 1fr); */
+    padding-top: var(--fs-5);
+}
+
+form>* {
+    grid-column: 2/3;
+}
+
+label {
+    display: block;
+    color: #303030;
+    font-size: small;
+}
+
+input,
+select {
+    width: 100%;
+    border: 0px;
+    background-color: inherit;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    padding-left: var(--fs-1);
+    line-height: 2;
+}
+
+select {
+    height: var(--fs-3);
+}
+
+.control-container {
+    margin-bottom: var(--fs-2);
+}
+
+form button {
+    /* width: 50%; */
+    /* place-self: center; */
+    background-color: #DE7B28;
+    cursor: pointer;
+    border: 1px solid #a7a7a7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #a7a7a7;
+    height: var(--fs-3);
+}
+
+form button:hover {
+    background-color: #EFE964;
+}
+
+form>p {
+    margin-bottom: var(--fs-3);
+}
+
+input.touched:invalid {
+    border: 1px solid red;
+}
+
+.high.highAgain {
+    text-align: center;
+    border: 1px solid red;
+    margin-top: var(--fs-1);
+    border-radius: 5px;
+    padding: 5px;
+}
