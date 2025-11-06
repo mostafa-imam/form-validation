@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left-pane">
+        <form action="httpbin.org/" method="post" novalidate>
+          <h1>Chat to our Team</h1>
+          <p>
+            Need help with something? Want a demo? Get in touch with our team
+            and we'll get in touch within 2 hours.
+          </p>
+          <div class="email-container control-container">
+            <label for="email">Email *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autofocus
+              placeholder="john-doe@example.com"
+            />
+          </div>
+
+          <div class="country-container control-container">
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+              <option value="">Choose a country</option>
+              <option value="eg">Egypt</option>
+              <option value="us">United Stated</option>
+              <option value="ru">Russia</option>
+              <option value="ch">Switzerland</option>
+              <option value="fr">France</option>
+            </select>
+          </div>
+
+          <div class="postal-container control-container">
+            <label for="postal-code">Postal Code *</label>
+            <input type="text" id="postal-code" name="postal-code" required />
+          </div>
+
+          <div class="password-container control-container">
+            <label for="password">Password *<small>(5–10 chars)</small></label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="5"
+              maxlength="10"
+            />
+          </div>
+
+          <div class="password-confirmation-container control-container">
+            <label for="password-confirm">Confirm Password *</label>
+            <input type="password" id="password-confirm" required />
+          </div>
+
+          <button type="button">Submit</button>
+          <div class="high"></div>
+        </form>
+      </div>
+      <div class="right-pane"></div>
+    </div>
+  </body>
+</html>
